@@ -1,0 +1,13 @@
+# Ledger and ownership formats
+
+CSV requires all eleven header names from `examples/ledger.csv`, in any order. Additional columns are ignored; duplicate column names are rejected. CSV quoting follows Go's standard reader. All cells are trimmed. Required values: entry/account IDs, chain ID, token/address, positive base-unit amount, and status (`expected` or `credited`). IDs are opaque strings and must be nonempty. Entry IDs must be unique. Reports preserve IDs and source file/row or SQLite entry identifiers.
+
+Addresses require `0x` plus 40 hexadecimal digits; hashes require `0x` plus 64. Comparisons normalize to lowercase; checksum casing is not required. Chain IDs are positive uint256 decimal values. Amounts are decimal digit strings within uint256, normalized to canonical decimal; zero expected amounts, signs, floats, scientific notation and hex are rejected. All amounts are serialized as JSON strings.
+
+Blank `tx_hash`, `log_index`, `credited_at_block`, and `recorded_block_hash` are optional. An index without a hash is invalid. An absent transaction hash is allowed even on a credited record, but always produces unresolved findings, never verification. An absent log index is accepted only when available receipt attributes uniquely select one event. Indices and heights are unsigned canonical decimal uint64, not transaction-relative log counters. `credited_at_block` is the application's claimed chain height at credit time; it is not independent RPC evidence.
+
+SQLite requires a `ledger_entries` table or view exposing those same column names. Use `examples/schema.sql`; this is a schema for source owners, never a migration run by the reconciler. Monetary values must be stored as TEXT and parse as exact decimal integers. Optional NULLs are treated like blank CSV fields. Entries are selected ordered by entry ID; duplicate IDs in a view are still rejected. Loading never updates or indexes the source; nonexistent databases are not created. Source adapters cap snapshots at 100,000 rows.
+
+The separate ownership CSV uses exactly `account_id,deposit_address`. Several addresses may belong to one account; one address may not belong to conflicting accounts. Repeated identical mappings are harmless. Missing owners and ledger-account/address disagreements are findings during reconciliation and validation failures in offline `validate`. Keep this authority independent of the financial records under audit.
+
+Fingerprints identify the normalized loaded snapshot, including source identifiers and order, rather than claiming to be hashes of the raw input bytes. Source snapshots and ownership snapshots are included in JSON. Reports may contain sensitive account information and should have appropriate local retention/access controls.

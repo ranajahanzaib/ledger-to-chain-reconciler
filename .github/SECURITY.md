@@ -4,6 +4,6 @@
 
 Please do not report security vulnerabilities through public GitHub issues.
 
-Instead, report them via GitHub's private [Security Advisories](../../security/advisories/new) feature. Include as much detail as possible: a description of the issue, steps to reproduce, and potential impact.
+Instead, use [GitHub private vulnerability reporting](https://github.com/ranajahanzaib/ledger-to-chain-reconciler/security/advisories/new) when it is enabled. If that option is unavailable, contact the maintainer using the contact information published on [their GitHub profile](https://github.com/ranajahanzaib). Include a description, reproduction steps, affected version or commit, and potential impact. Use synthetic ledger data and redact RPC credentials and customer information.
 
-You can expect an acknowledgment within 48 hours and a resolution timeline once the issue is confirmed.
+This project is maintained on a best-effort basis, without a guaranteed response time. Security fixes target the latest source revision; older releases do not have a separate support commitment.

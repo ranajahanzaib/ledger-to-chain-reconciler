@@ -72,3 +72,17 @@ yarn-error.log*
 
 # Python
 venv
+
+# Go builds and local reconciliation evidence
+/bin/
+/demo/
+/.ledgerchain/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.test
+coverage.out
+
+# Foundry artifacts
+/out/
+/cache/

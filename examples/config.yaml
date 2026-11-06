@@ -1,0 +1,23 @@
+# This example is for offline validation. make demo generates live addresses.
+network:
+  chain_id: "31337"
+  rpc_url: "http://127.0.0.1:8545"
+asset:
+  token_address: "0x1111111111111111111111111111111111111111"
+  symbol: TESTUSD
+  decimals: 6
+policy:
+  min_confirmations: 3
+  include_mint_transfers: false
+discovery:
+  from_block: 0
+  to_block: latest
+  chunk_size: 500
+  max_blocks: 100000
+rpc:
+  timeout_seconds: 10
+  run_timeout_seconds: 120
+  max_concurrency: 8
+  max_retries: 3
+output:
+  format: json

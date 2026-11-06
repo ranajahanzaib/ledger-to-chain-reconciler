@@ -7,8 +7,8 @@ We welcome contributions of all kinds to improve this project! Here's how you ca
 2. **Clone Your Fork**: Clone the forked repository to your local machine:
 
    ```bash
-   git clone <repo_url>
-   cd repo_dir
+   git clone git@github.com:YOUR_GITHUB_USERNAME/ledger-to-chain-reconciler.git
+   cd ledger-to-chain-reconciler
    ```
 
 3. **Create a Branch**: Create a new branch for your feature or bug fix:
@@ -44,3 +44,12 @@ We welcome contributions of all kinds to improve this project! Here's how you ca
 ### Issues
 
 Feel free to report bugs or suggest enhancements by creating an issue. Be sure to include detailed information about the problem and, if possible, steps to reproduce it.
+
+### Local verification
+
+Use Go 1.27.1+ and run `make check` and `make race`. Changes to receipt processing,
+matching, source isolation, coverage or history need regression tests. Install
+Foundry (`anvil`, `forge`, `cast`, tested v1.4.4) and Python 3.9+ before running
+`make integration` and `make demo`. Tests use only localhost, with no production
+credentials. Keep fixture broadcasting out of production Go packages. Document
+any changes to finding codes, severity, accounting eligibility or exit behavior.
