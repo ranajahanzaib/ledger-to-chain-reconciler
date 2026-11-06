@@ -130,4 +130,10 @@ This is a developer audit tool with a bounded event-accounting model, not a cert
 
 Native ETH, NFTs, rebasing, transfer-fee/share tokens, bridge settlement, shared custodial deposit addresses, and custom allocation workflows are unsupported. Historical timing comes from optional ledger data and is labelled accordingly. Confirmation counts are not `safe`/`finalized` consensus tags. Reconciliation never signs, broadcasts, changes balances, or modifies the source ledger. See [limitations](docs/limitations.md).
 
-Original project code is licensed under [MIT](LICENSE). Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md). Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+## Contributing
+
+Contributions are welcome. See the [contributing guide](CONTRIBUTING.md) for development and testing instructions, and review the [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
+
+## License
+
+[MIT](LICENSE) © Rana Jahanzaib. Third-party dependencies are covered by their respective licenses, listed in [Third-Party Notices](THIRD_PARTY_NOTICES.md).

@@ -59,10 +59,9 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-the repository maintainer, using the contact information published on
-[Rana Jahanzaib's GitHub profile](https://github.com/ranajahanzaib).
-All complaints will be reviewed and investigated promptly and fairly.
+reported privately to the repository maintainer using the contact information
+published on [Rana Jahanzaib's GitHub profile](https://github.com/ranajahanzaib).
+Reports will be reviewed fairly and handled on a best-effort basis.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.

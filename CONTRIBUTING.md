@@ -7,7 +7,7 @@ We welcome contributions of all kinds to improve this project! Here's how you ca
 2. **Clone Your Fork**: Clone the forked repository to your local machine:
 
    ```bash
-   git clone git@github.com:YOUR_GITHUB_USERNAME/ledger-to-chain-reconciler.git
+   git clone git@github.com:ranajahanzaib/ledger-to-chain-reconciler.git
    cd ledger-to-chain-reconciler
    ```
 
@@ -22,7 +22,7 @@ We welcome contributions of all kinds to improve this project! Here's how you ca
 5. **Commit Changes**: Commit your changes with a clear and descriptive message:
 
    ```bash
-   git commit -m "Add detailed description of the changes"
+   git commit -m "Describe your change"
    ```
 
 6. **Push Changes**: Push your changes to your fork:
@@ -33,7 +33,7 @@ We welcome contributions of all kinds to improve this project! Here's how you ca
 
 7. **Submit a Pull Request**: Open a pull request from your branch to the main repository's branch. Include a detailed description of your changes and the problem they solve.
 
-8. **Review and Feedback**: Participate in the review process. Make any requested changes, and your contribution will be merged!
+8. **Review and Feedback**: Respond to maintainer feedback. A pull request may be merged after review.
 
 ### Guidelines
 
