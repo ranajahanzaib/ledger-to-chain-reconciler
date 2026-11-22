@@ -1,5 +1,23 @@
 # Ledger-to-Chain Reconciler
 
+`ledgerchain` checks whether ERC-20 deposits recorded in a ledger match canonical on-chain Transfer evidence, and finds eligible inbound transfers missing from the ledger. It is a read-only Go CLI with CSV/SQLite inputs and JSON/text reports.
+
+![ledgerchain validating the example ledger from a terminal](docs/screenshots/cli-validation.png)
+
+This capture shows the real offline validation command and its output. The local-chain reconciliation demo is separate and requires Foundry (`forge`, `anvil`, and `cast`).
+
+## CLI screenshots
+
+The images below show additional output from the built CLI:
+
+**Build metadata**
+
+![ledgerchain version command showing build metadata](docs/screenshots/version.png)
+
+**Commands and exit codes**
+
+![ledgerchain help output showing commands, examples, and exit codes](docs/screenshots/commands.png)
+
 `ledgerchain` independently compares a deposit ledger with canonical ERC-20 Transfer events on one EVM network. It detects unsupported credits and discovers eligible inbound events that lack valid credits, using a separately supplied address ownership registry.
 
 The tool reads CSV or SQLite, checks receipts and canonical block headers through go-ethereum, and produces evidence-linked JSON or terminal reports. Amounts remain exact uint256 decimal strings. No private keys, hosted database, Docker, or commercial API are required.
